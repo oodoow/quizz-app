@@ -1,6 +1,6 @@
 ## Quizz app
 
-Quizz app created based on [this list](https://codewithhugo.com/coding-web-app-ideas/#notes-app)
+Quizz app testing Taekwondo knowledge (questions being generated using ChatGPT 🤖).
 
 > BE: nest.js, postgres
 > FE: next.js
@@ -8,7 +8,7 @@ Quizz app created based on [this list](https://codewithhugo.com/coding-web-app-i
 Todo's
 - admin part for inserting new questions
 - design of the game, handling wrong answers, counting time
-- deploy to vercel
+- deploy to vercel (?): would require script to run be and fe, secrets, db in cloud
 
 Showcase below
 
