@@ -12,5 +12,9 @@ Todo's
 
 Showcase below
 
-https://github.com/katacek/quizz-app/assets/56041262/00fa976a-8386-43a6-9d0d-8c053dfc0f1c
+
+
+https://github.com/katacek/quizz-app/assets/56041262/2612fee1-72bb-4387-b35c-7b481b5d5afb
+
+
 
