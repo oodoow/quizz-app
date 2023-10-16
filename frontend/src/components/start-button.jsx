@@ -19,8 +19,9 @@ export default function StartButton() {
         <StartButtonWrapper>
             <Button 
                 variant="info"
+                size="lg"
                 onClick={handleClick} >
-                Start
+                Seijak 🥋
             </Button>
         </StartButtonWrapper>
     );

@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-import callBackend from "../helpers";
 import arrayShuffle from "array-shuffle";
+import { Button } from "react-bootstrap";
+import styled from "styled-components";
 
 import Question from "../components/question";
+import callBackend from "../helpers";
+
+
+const CounterWrapper = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+`;
 
 export default function Game() {
     const [questions, setQuestions] = useState([]);
@@ -82,14 +90,18 @@ export default function Game() {
                             {selectedIndex < numberOfQuestions
                                 ? 
                                 <>
-                                    <div>Question {selectedIndex + 1} / {numberOfQuestions}</div>
+                                    <CounterWrapper>Question {selectedIndex + 1} / {numberOfQuestions}</CounterWrapper>
                                     <Question
                                         individualQuestion={pickedQuestions[selectedIndex] || {}}
                                         answerClicked={answerClicked} />
                                 </>
-                                : <div> 
-                                    <p>Quiz finished - correct answers {rightAnswers}/{numberOfQuestions}</p>
-                                    <button onClick={newQuiz}>New Quiz</button>
+                                : <div className="center"> 
+                                    <h1 className="mb-4">Quiz finished - correct answers {rightAnswers}/{numberOfQuestions}</h1>
+                                    <Button 
+                                        onClick={newQuiz}
+                                        variant="success">
+                                        Play again!
+                                    </Button>
                                 </div>
                             }
                         </div>
