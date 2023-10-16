@@ -30,4 +30,10 @@ export class QuestionsController {
   createQuestions(@Body() createQuestionDto: CreateQuestionDto) {
     return this.questionService.createQuestion(createQuestionDto);
   }
+
+  @Post('massCreateQuestion')
+  @UsePipes(ValidationPipe)
+  massCreateQuestion(@Body() createQuestionDto: any) {
+    return this.questionService.massCreateQuestion(createQuestionDto);
+  }
 }
