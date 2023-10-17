@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "build": "cd backend && nest build && cd ../frontend && npm install && npm run build",
+        "build": "cd backend && npm i && nest build && cd ../frontend && npm install && npm run build",
         "start": "cd backend && nest start && cd ../frontend && next start"
     }
 }
