@@ -1,1 +1,2 @@
-web: cd backend && npm run start && cd ../frontend && npm run start
+server: cd backend && npm run start 
+web: cd frontend && npm run start
