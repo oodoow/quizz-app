@@ -26,7 +26,7 @@ export default function Game() {
         // TODO: use react-query, see notes from previous app
         const loadQuestions = async () => {
             try {
-                const questionsFromDb = await callBackend({method: 'GET', url: 'http://localhost:3000/questions'});
+                const questionsFromDb = await callBackend({method: 'GET', url: 'questions'});
                 if (questionsFromDb) {
                     setQuestions(questionsFromDb);
                 }

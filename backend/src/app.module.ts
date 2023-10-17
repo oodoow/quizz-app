@@ -16,6 +16,10 @@ import entities from './typeorm';
         username: configService.get('DB_USERNAME'),
         password: configService.get('DB_PASSWORD'),
         database: configService.get('DB_NAME'),
+        // limit number of connections as we have low cost db
+        extra: {
+          max: 1, // set pool max size
+        },
         entities: entities,
         synchronize: true,
       }),

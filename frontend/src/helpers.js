@@ -1,11 +1,11 @@
 import axios from "axios";
 
 export default async function callBackend({ method = 'POST', url, payload, headers}) {
+  const link = `${process.env.REACT_APP_DOMAIN}/${url}`
   try {
     const { data, status } = await axios({
       method,
-      url,
-      // url: `http://localhost:3001/api/v1/${url}`,
+      url: link,
       data: payload,
       headers: headers || { "Content-Type": "application/json" }
     });
