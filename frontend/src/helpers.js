@@ -1,7 +1,9 @@
 import axios from "axios";
 
 export default async function callBackend({ method = 'POST', url, payload, headers}) {
+  /* eslint-disable */
   const link = `${process.env.REACT_APP_DOMAIN}/${url}`
+  /* eslint-enable */
   try {
     const { data, status } = await axios({
       method,
